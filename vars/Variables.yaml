@@ -1,7 +1,7 @@
 vcenter_hostname: icsivcprodmx.icsicorp.local
 vcenter_username: AdminAnsible@vsphere.local
 vcenter_password: g"L*O+)kuq4EPe3o
-datacenter: VxRail-Datacenter
+vm_datacenter: VxRail-Datacenter
 validate_certs: false
 
 guest_name: CTXCASPEL01
