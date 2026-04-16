@@ -1,1 +1,34 @@
 ---
+- name: Apagar máquinas virtuales en VMware vCenter
+  hosts: localhost
+  gather_facts: false
+  collections:
+    - community.vmware
+
+vars:
+    vcenter_hostname: icsivcprodmx.icsicorp.local
+    vcenter_username: AdminAnsible@vsphere.local
+    vcenter_password: "{{ vcenter_password }}"
+    validate_certs: false
+
+tasks:
+
+    - name: Apagar VMs de forma ordenada (Guest Shutdown)
+      vmware_guest_powerstate:
+        hostname: "{{ vcenter_hostname }}"
+        username: "{{ vcenter_username }}"
+        password: "{{ vcenter_password }}"
+        validate_certs: "{{ validate_certs }}"
+        name: "{{ item }}"
+        state: powered-off
+        force: false
+      loop: "{{ vm_list_01 }}"
+      delegate_to: localhost
+      register: poweroff_results
+
+    - name: Resultado del apagado
+      debug:
+        msg: >
+          VM {{ item.item }} →
+          {{ item.changed | ternary('Apagada', 'Sin cambios') }}
+      loop: "{{ poweroff_results.results }}""
