@@ -15,6 +15,12 @@ host_list:
  - icsiprodnod03.icsicorp.local
  - icsiprodnod04.icsicorp.local
 
+vm_list_test: 
+ - icsiproxycdmx01
+ - icsiproxycdmx02
+ - COISUBCAMX01
+ - ICSISUBCDMX
+
 vm_list_01:  
  - 4MAADCONMX01
  - 4MAEXCMX01
