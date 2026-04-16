@@ -22,8 +22,7 @@
         datacenter: "{{ vm_datacenter }}"
         validate_certs: "{{ validate_certs }}"
         name: "{{ item }}"         
-        state: powered-off
-        force: false
+        state: shutdown-guest
       loop: "{{ vm_list_test }}"
       delegate_to: localhost
       register: poweroff_results
@@ -33,7 +32,7 @@
         msg: >
           VM {{ item.item }} →
           {{ item.changed | ternary('Apagada', 'Sin cambios') }}
-      loop: "{{ poweroff_results.results }}"  
+      loop: "{{ poweroff_results.vm }}"  
 
 
     # - name: Apagar VMs de forma ordenada (Guest Shutdown)
