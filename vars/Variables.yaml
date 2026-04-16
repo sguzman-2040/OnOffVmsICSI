@@ -1,0 +1,76 @@
+vcenter_hostname: icsivcprodmx.icsicorp.local
+vcenter_username: AdminAnsible@vsphere.local
+vcenter_password: g"L*O+)kuq4EPe3o
+validate_certs: false
+
+esxi_hostname: icsiprodnod01.icsicorp.local
+esxi_username: root
+esxi_password: Pr0d3sx1_2024!@
+
+host_list:
+ - icsiprodnod01.icsicorp.local
+ - icsiprodnod02.icsicorp.local
+ - icsiprodnod03.icsicorp.local
+ - icsiprodnod04.icsicorp.local
+
+vm_list_01:  
+ - 4MAADCONMX01
+ - 4MAEXCMX01
+ - BMCDISCOVER
+ - COISUBCAMX01
+ - CTXICDDC IcsiCorp
+ - CTXICUB02 IcsiCorp
+ - CTXICVDA001 IcsiCorp
+ - CTXICVDA004 IcsiCorp
+ - CTXICVDA006 IcsiCorp
+ - Guardicore_Aggregation 108
+ - ICSIADCONCDMX01
+ - ICSIBIOM01
+ - ICSIBMCCM
+ - ICSIDFS02
+ - ICSIFSMX01
+ - ICSIIVANTIAPP
+ - ICSIIVANTIREP
+ - ICSIIVANTISRS
+ - ICSIIVANTIUAT
+ - ICSIRADIUSCDMX
+ - ICSISIMCDMX
+ - ICSISMTPRELAY01
+ - ICSISUBCDMX
+ - ICSISWDCEMX01
+ - ICSIVEEAMMX02_Repositorio_QRO
+ - ICSIVEEAMONE
+ - MAILCOI02
+ - sdesktia01
+ - SMTPRELAY
+ - TIAADCOMX01
+ - TIAEXCMX01
+ - veeam01
+ - VEEAM02
+ - VMCLOUD04
+ - VMCLOUD05
+ - WIN11OSD
+
+vm_list_02:
+ - 4MAADMX01
+ - ADCOI02
+ - CTX-NSCONSOLE-01
+ - CTX-NSVPX01
+ - CTX-NSVPX02
+ - ICSIIVANTISQL
+ - TIAADMX01
+ - VMCLOUD03
+
+vm_list_03:
+ - ICSIADMX003
+ - ICSIADMX004
+ - VxRail Manager
+
+vm_list_04:
+ - VMware vCenter Server Appliance
+
+
+
+
+
+ 
