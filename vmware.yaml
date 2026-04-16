@@ -18,7 +18,6 @@
         name: "{{ item }}"         
         state: shutdown-guest
       loop: "{{ vm_list_test }}"
-      delegate_to: localhost
       register: poweroff_results
       
     - name: Resultado del apagado
