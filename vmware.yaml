@@ -14,26 +14,26 @@
 
   tasks:
 
-     - name: Apagar VMs de forma ordenada (Guest Shutdown)
-        vmware.vmware.vm_powerstate:
-         hostname: "{{ vcenter_hostname }}"
-         username: "{{ vcenter_username }}"
-         password: "{{ vcenter_password }}"
-         datacenter: "{{ vm_datacenter }}"
-         validate_certs: "{{ validate_certs }}"
-         name: "{{ item }}"         
-         state: powered-off
-         force: false
-         loop: "{{ vm_list_test }}"
-         delegate_to: localhost
-        register: poweroff_results
-        
-     - name: Resultado del apagado
-        debug:
-          msg: >
-            VM {{ item.item }} →
-            {{ item.changed | ternary('Apagada', 'Sin cambios') }}
-        loop: "{{ poweroff_results.results }}"  
+    - name: Apagar VMs de forma ordenada (Guest Shutdown)
+      vmware.vmware.vm_powerstate:
+        hostname: "{{ vcenter_hostname }}"
+        username: "{{ vcenter_username }}"
+        password: "{{ vcenter_password }}"
+        datacenter: "{{ vm_datacenter }}"
+        validate_certs: "{{ validate_certs }}"
+        name: "{{ item }}"         
+        state: powered-off
+        force: false
+      loop: "{{ vm_list_test }}"
+      delegate_to: localhost
+      register: poweroff_results
+      
+    - name: Resultado del apagado
+      debug:
+        msg: >
+          VM {{ item.item }} →
+          {{ item.changed | ternary('Apagada', 'Sin cambios') }}
+      loop: "{{ poweroff_results.results }}"  
 
 
     # - name: Apagar VMs de forma ordenada (Guest Shutdown)
