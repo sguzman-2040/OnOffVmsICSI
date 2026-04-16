@@ -4,7 +4,7 @@
   gather_facts: false
   collections:
   vars_files:
-    vars/Variables.yaml
+    vars/variables.yaml
 
   tasks:
 
@@ -26,19 +26,3 @@
           VM {{ item.item }} →
           {{ item.changed | ternary('Apagada', 'Sin cambios') }}
       loop: "{{ poweroff_results.results }}"  
-
-
-    # - name: Apagar VMs de forma ordenada (Guest Shutdown)
-    #   vmware.vmware.vm_powerstate:
-    #     hostname: "{{ vcenter_hostname }}"
-    #     username: "{{ vcenter_username }}"
-    #     password: "{{ vcenter_password }}"
-    #     datacenter: "{{ vm_datacenter }}"
-    #     validate_certs: "{{ validate_certs }}"
-    #     name: "{{ guest_name }}"
-    #     state: shutdown-guest
-    #   register: deploy
-
-    # - name: Resultado del apagado
-    #   debug:
-    #     msg: deploy     

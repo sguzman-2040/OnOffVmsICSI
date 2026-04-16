@@ -1,0 +1,34 @@
+---
+- name: Shutdown ESXi Host gracefully
+  hosts: localhost
+  gather_facts: no
+  collections:
+    - community.vmware
+
+  vars_files:
+    vars/variables.yaml
+
+  tasks:
+    - name: Enter maintenance mode
+      vmware_host_maintenance:
+        hostname: "{{ vcenter_hostname }}"
+        username: "{{ vcenter_username }}"
+        password: "{{ vcenter_password }}"
+        esxi_hostname: "{{ esxi_hostname }}"
+        validate_certs: "{{ validate_certs }}"
+        state: present
+        timeout: 600
+       
+    - name: Shutdown ESXi host
+      vmware_host_powerstate:
+        hostname: "{{ vcenter_hostname }}"
+        username: "{{ vcenter_username }}"
+        password: "{{ vcenter_password }}"
+        esxi_hostname: "{{ esxi_hostname }}"
+        validate_certs: "{{ validate_certs }}"
+        state: powered-off
+        register: deploy
+
+    - name: Resultado del apagado
+      debug:
+        msg: deploy
