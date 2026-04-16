@@ -17,7 +17,7 @@
         validate_certs: "{{ validate_certs }}"
         name: "{{ item }}"         
         state: "{{vm_state}}"
-      loop: "{{ vm_list_test }}"
+      loop: "{{ vm_list_01 }}"
       register: poweroff_results
       
     - name: Resultado del apagado

@@ -8,18 +8,13 @@ esxi_hostname: icsiprodnod01.icsicorp.local
 esxi_username: root
 esxi_password: Pr0d3sx1_2024!@
 
-host_list:
+esxi_hosts:
  - icsiprodnod01.icsicorp.local
  - icsiprodnod02.icsicorp.local
  - icsiprodnod03.icsicorp.local
  - icsiprodnod04.icsicorp.local
 
 vm_state: null
-vm_list_test: 
- - icsiproxycdmx01
- - icsiproxycdmx02
- - COISUBCAMX01
- - ICSISUBCDMX
 
 vm_list_01:  
  - 4MAADCONMX01
