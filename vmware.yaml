@@ -20,6 +20,7 @@
         username: "{{ vcenter_username }}"
         password: "{{ vcenter_password }}"
         datacenter: "{{ vm_datacenter }}"
+        validate_certs: false
         name: "{{ guest_name }}"
         state: shutdown-guest
       register: deploy
