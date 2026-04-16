@@ -51,7 +51,8 @@ vm_list_01:
  - VEEAM02
  - VMCLOUD04
  - VMCLOUD05
- - WIN11OSD
+ - icsiproxycdmx01
+ - icsiproxycdmx02
 
 vm_list_02:
  - 4MAADMX01

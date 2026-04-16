@@ -14,7 +14,7 @@
 
   tasks:
 
-    - name: Wait for the virtual machine to shutdown
+    - name: Apagar VMs de forma ordenada (Guest Shutdown)
       vmware.vmware.vm_powerstate:
         hostname: "{{ vcenter_hostname }}"
         username: "{{ vcenter_username }}"
