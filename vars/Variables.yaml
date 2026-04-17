@@ -4,10 +4,6 @@ vcenter_password: g"L*O+)kuq4EPe3o
 vm_datacenter: VxRail-Datacenter
 validate_certs: false
 
-esxi_hostname: icsiprodnod01.icsicorp.local
-esxi_username: root
-esxi_password: Pr0d3sx1_2024!@
-
 esxi_hosts:
  - icsiprodnod01.icsicorp.local
  - icsiprodnod02.icsicorp.local
