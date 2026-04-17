@@ -10,6 +10,8 @@ esxi_hosts:
  - icsiprodnod03.icsicorp.local
  - icsiprodnod04.icsicorp.local
 
+vm_state: null
+
 vm_list_01: 
  - 4MAADCONMX01
  - 4MAEXCMX01
