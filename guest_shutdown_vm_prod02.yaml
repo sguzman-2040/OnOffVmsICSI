@@ -16,7 +16,7 @@
         datacenter: "{{ vm_datacenter }}"
         validate_certs: "{{ validate_certs }}"
         name: "{{ item }}"         
-        state: "{{vm_state}}"
+        state: shutdown-guest
       loop: "{{ vm_list_02 }}"
       register: poweroff_list_02_results
       

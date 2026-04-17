@@ -12,7 +12,7 @@ esxi_hosts:
 
 vm_state: null
 
-vm_list_01:  
+vm_list_01: 
  - 4MAADCONMX01
  - 4MAEXCMX01
  - BMCDISCOVER
@@ -50,25 +50,6 @@ vm_list_01:
  - VMCLOUD05
  - icsiproxycdmx01
  - icsiproxycdmx02
-
-vm_list_02:
- - 4MAADMX01
- - ADCOI02
- - CTX-NSCONSOLE-01
- - CTX-NSVPX01
- - CTX-NSVPX02
- - ICSIIVANTISQL
- - TIAADMX01
- - VMCLOUD03
-
-vm_list_03:
- - ICSIADMX003
- - ICSIADMX004
- - VxRail Manager
-
-vm_list_04:
- - VMware vCenter Server Appliance
-
 
 
 
