@@ -1,0 +1,28 @@
+---
+- name: Apagar máquinas virtuales en VMware vCenter
+  hosts: localhost
+  gather_facts: false
+  collections:
+  vars_files:
+    vars/variables.yaml
+
+  tasks:
+
+    - name: Apagar VMs de forma ordenada (Guest Shutdown)
+      vmware.vmware.vm_powerstate:
+        hostname: "{{ vcenter_hostname }}"
+        username: "{{ vcenter_username }}"
+        password: "{{ vcenter_password }}"
+        datacenter: "{{ vm_datacenter }}"
+        validate_certs: "{{ validate_certs }}"
+        name: "{{ item }}"         
+        state: "{{vm_state}}"
+      loop: "{{ vm_list_03 }}"
+      register: poweroff_list_03_results
+      
+    - name: Resultado del apagado
+      debug:
+        msg: >
+          VM {{ item.item }} →
+          {{ item.changed | ternary('Apagada', 'Sin cambios') }}
+      loop: "{{ poweroff_list_03_results.results }}"
