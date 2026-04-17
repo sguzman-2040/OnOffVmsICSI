@@ -29,8 +29,8 @@
         validate_certs: "{{ validate_certs }}"
         name: "{{ item }}"         
         state: "{{ vm_state_demo }}" 
-      loop: "{{ vm_list_test }}"
-      register: poweroff_results
+      loop: "{{ vm_list_demo }}"
+      register: poweroff_results_vm_list_demo
 
     - name: Obtener vm_id
       set_fact:
@@ -41,8 +41,8 @@
       debug:
         msg: >
           VM {{ item.item }} →
-          {{ item.changed | ternary(current_state, 'Sin cambios') }}
-      loop: "{{ poweroff_results.results }}" 
+          {{ item.changed | ternary(current_state , 'Sin cambios') }}
+      loop: "{{ poweroff_results_vm_list_demo.results }}" 
 
     
       
