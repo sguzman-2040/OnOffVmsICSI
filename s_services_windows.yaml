@@ -1,0 +1,22 @@
+---
+- name: Iniciar pdm_daemon_manager solo si está detenido (con validación)
+  hosts: windows
+  gather_facts: no
+
+  tasks:
+    - name: Obtener estado del servicio
+      ansible.windows.win_service_info:
+        name: pdm_daemon_manager
+      register: pdm_service
+
+    - name: Iniciar servicio solo si está detenido
+      ansible.windows.win_service:
+        name: pdm_daemon_manager
+        state: started
+      when: pdm_service.services[0].state != 'running'
+
+      
+
+
+
+        
