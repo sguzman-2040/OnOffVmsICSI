@@ -4,7 +4,7 @@
   gather_facts: false
   collections:
   vars_files:
-    vars/variables_demo.yaml
+    vars/d_variables_demo.yaml
 
   tasks:
 
