@@ -9,9 +9,40 @@ esxi_hosts_demo:
   - icsinodvmw02.icsicorp.hlx
   - icsinodvmw03.icsicorp.hlx
  
-vm_state_demo: null
+#vm_state_demo: null
 
-vm_list_demo: 
+vm_list_test: 
   - Aria LCM
   - IDM
   - VM Aria
+  
+
+#vm_list_demo: 
+#   - Aria LCM
+#   - Bastion
+#   - BastionWin
+#   - BIGIP-1
+#   - BIGIP-2
+#   - BIGIP-3
+#   - CP01-icsiocp
+#   - CP02-icsiocp
+#   - CP03-icsiocp
+#   - DemoIZZI
+#   - Dynatrace
+#   - IDM
+#   - VM Aria
+#   - WebServer_1.1
+#   - Web-Viewer
+#   - Web-Viewer-2
+#   - Win11-1
+#   - Win11-2
+#   - Win11-3
+#   - Win2022-1
+#   - Win2022-2
+#   - Active Directory
+#   - vSAN File Service Node (1)
+#   - vSAN File Service Node (2)
+#   - vSAN File Service Node (3)
+#   - vCLS-4c4c4544-0057-4210-8052-b2c04f5a5632
+#   - vCLS-4c4c4544-0057-4210-8053-b2c04f5a5632
+#   - VMware vCenter Server

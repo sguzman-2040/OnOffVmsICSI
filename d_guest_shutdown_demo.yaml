@@ -16,8 +16,8 @@
         datacenter: "{{ vm_datacenter_demo }}"
         validate_certs: "{{ validate_certs }}"
         name: "{{ item }}"         
-        state: "{{vm_state_demo}}"
-      loop: "{{ vm_list_demo }}"
+        state: shutdown-guest
+      loop: "{{ vm_list_test }}"
       register: poweroff_results
       
     - name: Resultado del apagado
@@ -26,3 +26,5 @@
           VM {{ item.item }} →
           {{ item.changed | ternary('Apagada', 'Sin cambios') }}
       loop: "{{ poweroff_results.results }}" 
+
+      
