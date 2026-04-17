@@ -18,11 +18,11 @@
         name: "{{ item }}"         
         state: shutdown-guest
       loop: "{{ vm_list_01 }}"
-      register: poweroff_list_01_results
+      register: poweroff_results
 
     - name: Resultado del apagado
       debug:
         msg: >
           VM {{ item.item }} →
           {{ item.changed | ternary('Apagada', 'Sin cambios') }}
-      loop: "{{ poweroff_list_01_results.results }}"
+      loop: "{{ poweroff_results.results }}"
