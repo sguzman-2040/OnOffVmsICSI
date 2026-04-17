@@ -1,14 +1,26 @@
 ---
-- name: Apagar y encender máquinas virtuales en VMware vCenter
+- name: Apagado y Encendido de VMs en VMware vCenter
   hosts: localhost
   gather_facts: false
   collections:
   vars_files:
     vars/d_variables_demo.yaml
+  vars: 
+    current_state: "Prendida"
 
   tasks:
 
-    - name: Apagado o encendido VMs de forma ordenada (Guest Shutdown)
+    - name: IF estado  
+      debug:
+        msg: "La VM está apagada"
+      when: vm_state_demo == "powered-on"
+
+    - name: ELSE estado
+      debug:
+        msg: "La VM está encendida"
+      when: vm_state_demo != "powered-on"
+
+    - name: Apagado o Encendido VMs de forma ordenada (Guest Shutdown)
       vmware.vmware.vm_powerstate:
         hostname: "{{ vcenter_hostname_demo }}"
         username: "{{ vcenter_username_demo }}"
@@ -19,12 +31,18 @@
         state: "{{ vm_state_demo }}" 
       loop: "{{ vm_list_test }}"
       register: poweroff_results
-      
+
+    - name: Obtener vm_id
+      set_fact:
+        current_state: "Apagada"
+      when: vm_state_demo != "powered-on" 
+
     - name: Resultado del apagado o encendido
       debug:
         msg: >
           VM {{ item.item }} →
-          {{ item.changed | ternary('Apagada', 'Sin cambios') }}
+          {{ item.changed | ternary(current_state, 'Sin cambios') }}
       loop: "{{ poweroff_results.results }}" 
 
+    
       
