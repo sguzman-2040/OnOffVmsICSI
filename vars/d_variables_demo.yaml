@@ -9,7 +9,7 @@ esxi_hosts_demo:
   - icsinodvmw02.icsicorp.hlx
   - icsinodvmw03.icsicorp.hlx
  
-#vm_state_demo: null
+vm_state_demo: null
 
 vm_list_test: 
   - Aria LCM

@@ -1,5 +1,5 @@
 ---
-- name: Apagar máquinas virtuales en VMware vCenter
+- name: Apagar y encender máquinas virtuales en VMware vCenter
   hosts: localhost
   gather_facts: false
   collections:
@@ -8,7 +8,7 @@
 
   tasks:
 
-    - name: Apagar VMs de forma ordenada (Guest Shutdown)
+    - name: Apagado o encendido VMs de forma ordenada (Guest Shutdown)
       vmware.vmware.vm_powerstate:
         hostname: "{{ vcenter_hostname_demo }}"
         username: "{{ vcenter_username_demo }}"
@@ -16,11 +16,11 @@
         datacenter: "{{ vm_datacenter_demo }}"
         validate_certs: "{{ validate_certs }}"
         name: "{{ item }}"         
-        state: shutdown-guest
+        state: "{{ vm_state_demo }}" 
       loop: "{{ vm_list_test }}"
       register: poweroff_results
       
-    - name: Resultado del apagado
+    - name: Resultado del apagado o encendido
       debug:
         msg: >
           VM {{ item.item }} →
