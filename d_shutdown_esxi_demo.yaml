@@ -9,24 +9,24 @@
     vars/d_variables_demo.yaml
 
   tasks:
-    - name: Enter maintenance mode
-      vmware_host_maintenance:
-        hostname: "{{ vcenter_hostname_demo }}"
-        username: "{{ vcenter_username_demo }}"
-        password: "{{ vcenter_password_demo }}"
-        validate_certs: "{{ validate_certs }}"
-        esxi_hostname: "{{ item }}"
-        state: present
-        timeout: 900
-        loop: "{{ esxi_hosts_demo }}"
-        register: maintenance_results
+    # - name: Enter maintenance mode
+    #   vmware_host_maintenance:
+    #     hostname: "{{ vcenter_hostname_demo }}"
+    #     username: "{{ vcenter_username_demo }}"
+    #     password: "{{ vcenter_password_demo }}"
+    #     validate_certs: "{{ validate_certs }}"
+    #     esxi_hostname: "{{ item }}"
+    #     state: present
+    #     timeout: 900
+    #     loop: "{{ esxi_hosts_demo }}"
+    #     register: maintenance_results
 
-    - name: Resultado del modo mantenimiento de los esxi
-      debug:
-        msg: >
-          VM {{ item.item }} →
-          {{ item.changed | ternary('maintenance', 'Sin cambios') }}
-      loop: "{{ maintenance_results.results }}"
+    # - name: Resultado del modo mantenimiento de los esxi
+    #   debug:
+    #     msg: >
+    #       VM {{ item.item }} →
+    #       {{ item.changed | ternary('maintenance', 'Sin cambios') }}
+    #   loop: "{{ maintenance_results.results }}"
        
     - name: Shutdown ESXi host
       vmware_host_powerstate:
