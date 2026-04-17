@@ -17,7 +17,7 @@
         validate_certs: "{{ validate_certs }}"
         name: "{{ item }}"         
         state: shutdown-guest
-      loop: "{{ vm_list_01 }}"
+      loop: "{{ vm_list }}"
       delegate_to: localhost
       register: shutdown_results
 

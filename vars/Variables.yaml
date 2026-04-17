@@ -10,7 +10,7 @@ esxi_hosts:
  - icsiprodnod03.icsicorp.local
  - icsiprodnod04.icsicorp.local
 
-vm_list_01: 
+vm_list: 
  - 4MAADCONMX01
  - 4MAEXCMX01
  - BMCDISCOVER
