@@ -4,7 +4,7 @@
   gather_facts: false
   collections:
   vars_files:
-      vars/p_variables.yaml
+      vars/p_variables_prod.yaml
   vars: 
     current_state: "Prendida"
 

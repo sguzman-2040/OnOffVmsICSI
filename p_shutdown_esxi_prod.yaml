@@ -6,7 +6,7 @@
     - community.vmware
 
   vars_files:
-    vars/p_variables.yaml
+    vars/p_variables_prod.yaml
 
   tasks:
     # - name: Enter maintenance mode
