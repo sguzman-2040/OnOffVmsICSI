@@ -45,6 +45,7 @@ vm_list_01:
  - icsiproxycdmx02
 
 vm_list_02:
+ - WIN11OSD
  - CTXICDDC IcsiCorp
  - CTXICUB02 IcsiCorp
  - CTXICVDA001 IcsiCorp
