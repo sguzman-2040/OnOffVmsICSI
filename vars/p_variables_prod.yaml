@@ -4,7 +4,7 @@ vcenter_password: g"L*O+)kuq4EPe3o
 vm_datacenter: VxRail-Datacenter
 validate_certs: false
 
-esxi_hosts:
+esxi_host:
  - icsiprodnod01.icsicorp.local
  - icsiprodnod02.icsicorp.local
  - icsiprodnod03.icsicorp.local
