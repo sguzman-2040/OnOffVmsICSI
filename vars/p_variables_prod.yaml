@@ -61,7 +61,5 @@ vm_list_02:
  - CTX-NSVPX01
  - CTXICDDC IcsiCorp
  - CTXICUB02 IcsiCorp
- 
-vm_list_03: 
  - ICSIADMX003
-
+ 
