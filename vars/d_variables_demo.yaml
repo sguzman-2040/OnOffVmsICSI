@@ -34,6 +34,12 @@ vm_list_demo:
 
   #lista de encendido
   - Active Directory
+  - CP01-icsiocp
+  - CP02-icsiocp
+  - CP03-icsiocp
+  - Bastion
+  - BastionWin
+  - Linux-Server-mcm735-325112080352
   - Win11-1
   - Win11-2
   - Win11-3
@@ -51,6 +57,7 @@ vm_list_demo:
   - IDM
   - VM Aria
   - Linux-Server-mcm735-325112080352
+
 
 
   
