@@ -11,8 +11,8 @@ esxi_hosts:
  - icsiprodnod04.icsicorp.local
 
 vm_state: null
-# lista de apagado
-vm_list_off: 
+
+vm_list_01: 
  - icsiproxycdmx01
  - icsiproxycdmx02
  - 4MAADCONMX01

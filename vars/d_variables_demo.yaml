@@ -13,11 +13,15 @@ vm_state_demo: null
 
 # lista de apagado
 vm_list_demo: 
+  - Linux-Server-mcm735-325112080352
   - Aria LCM
+  - IDM
+  - Centos 7
+  - VM Aria
+  - BIGIP-1
+  - BIGIP-3
   - DemoIZZI
   - Dynatrace
-  - IDM
-  - VM Aria
   - WebServer_1.1
   - Web-Viewer
   - Web-Viewer-2
