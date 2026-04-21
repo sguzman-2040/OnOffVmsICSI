@@ -11,6 +11,7 @@ esxi_hosts_demo:
  
 vm_state_demo: null
 
+# lista de apagado
 vm_list_demo: 
   - Aria LCM
   - DemoIZZI
@@ -26,3 +27,26 @@ vm_list_demo:
   - Win2022-1
   - Win2022-2
   - Active Directory
+
+  #lista de encendido
+  - Active Directory
+  - Win11-1
+  - Win11-2
+  - Win11-3
+  - Win2022-1
+  - Win2022-2
+  - BIGIP-1
+  - BIGIP-3
+  - DemoIZZI
+  - Dynatrace
+  - WebServer_1.1
+  - Web-Viewer
+  - Web-Viewer-2
+  - Aria LCM
+  - Centos 7
+  - IDM
+  - VM Aria
+  - Linux-Server-mcm735-325112080352
+
+
+  

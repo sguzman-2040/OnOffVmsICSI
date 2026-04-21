@@ -11,46 +11,44 @@ esxi_hosts:
  - icsiprodnod04.icsicorp.local
 
 vm_state: null
-
-vm_list_01: 
+# lista de apagado
+vm_list_off: 
+ - icsiproxycdmx01
+ - icsiproxycdmx02
  - 4MAADCONMX01
  - 4MAEXCMX01
  - BMCDISCOVER
- - COISUBCAMX01
- - Guardicore_Aggregation 108
- - ICSIADCONCDMX01
- - ICSIBIOM01
  - ICSIBMCCM
+ - WIN11OSD
+ - COISUBCAMX01
+ - MAILCOI02
+ - CTXICVDA001 IcsiCorp
+ - CTXICVDA004 IcsiCorp
+ - CTXICVDA006 IcsiCorp
+ - CTXICDDC IcsiCorp
+ - CTXICUB02 IcsiCorp
+ - VMCLOUD04
+ - VMCLOUD05
+ - ICSIBIOM01
  - ICSIDFS02
  - ICSIFSMX01
+ - SMTPRELAY
+ - ICSISIMCDMX
+ - ICSISMTPRELAY01
+ - ICSISUBCDMX
+ - Guardicore_Aggregation 108
  - ICSIIVANTIAPP
  - ICSIIVANTIREP
  - ICSIIVANTISRS
  - ICSIIVANTIUAT
- - ICSIRADIUSCDMX
- - ICSISIMCDMX
- - ICSISMTPRELAY01
- - ICSISUBCDMX
- - ICSISWDCEMX01
- - ICSIVEEAMMX02_Repositorio_QRO
  - ICSIVEEAMONE
- - MAILCOI02
  - sdesktia01
- - SMTPRELAY
  - TIAADCOMX01
  - TIAEXCMX01
+ - ICSIVEEAMMX02_Repositorio_QRO
  - veeam01
  - VEEAM02
- - icsiproxycdmx01
- - icsiproxycdmx02
-
-vm_list_02:
- - WIN11OSD
- - CTXICDDC IcsiCorp
- - CTXICUB02 IcsiCorp
- - CTXICVDA001 IcsiCorp
- - CTXICVDA004 IcsiCorp
- - CTXICVDA006 IcsiCorp
+ - ICSIRADIUSCDMX
  - 4MAADMX01
  - ADCOI02
  - TIAADMX01
@@ -59,17 +57,61 @@ vm_list_02:
  - CTX-NSVPX02
  - CTX-NSVPX01
  - VMCLOUD03
+ - ICSIADMX004
+ - ICSIADMX003
+
+#lista de encendido
+vm_list_on:
+ - VMCLOUD03
+ - CTX-NSVPX01
+ - CTX-NSVPX02
+ - CTX-NSCONSOLE-01
+ - CTXICVDA001 IcsiCorp
+ - CTXICVDA004 IcsiCorp
+ - CTXICVDA006 IcsiCorp
+ - CTXICDDC IcsiCorp
+ - CTXICUB02 IcsiCorp
  - VMCLOUD04
  - VMCLOUD05
-
-vm_list_03:
- - ICSIADMX003
  - ICSIADMX004
- - VxRail Manager
+ - ICSIRADIUSCDMX
+ - 4MAADMX01
+ - ADCOI02
+ - TIAADMX01
+ - ICSIIVANTISQL
+ - ICSIDFS02
+ - ICSIFSMX01
+ - BMCDISCOVER
+ - 4MAADCONMX01
+ - 4MAEXCMX01
+ - ICSIBMCCM
+ - sdesktia01
+ - WIN11OSD
+ - COISUBCAMX01
+ - MAILCOI02
+ - ICSIBIOM01
+ - SMTPRELAY
+ - ICSISIMCDMX
+ - ICSISMTPRELAY01
+ - ICSISUBCDMX
+ - Guardicore_Aggregation 108
+ - ICSIIVANTIAPP
+ - ICSIIVANTIREP
+ - ICSIIVANTISRS
+ - ICSIIVANTIUAT
+ - ICSIVEEAMONE
+ - TIAADCOMX01
+ - TIAEXCMX01
+ - ICSIVEEAMMX02_Repositorio_QRO
+ - veeam01
+ - VEEAM02
+ - icsiproxycdmx01
+ - icsiproxycdmx02
+  
+ 
 
-vm_list_04:
- - VMware vCenter Server Appliance
-
+ 
+ 
 
 
 

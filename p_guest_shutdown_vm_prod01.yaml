@@ -29,7 +29,7 @@
         validate_certs: "{{ validate_certs }}"
         name: "{{ item }}"         
         state: "{{ vm_state }}" 
-      loop: "{{ vm_list_01 }}"
+      loop: "{{ vm_list_off }}"
       register: poweroff_results_vm_list_01
 
     - name: Obtener vm_id
