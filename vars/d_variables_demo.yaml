@@ -13,13 +13,17 @@ vm_state_demo: null
 
 # lista de apagado
 vm_list_demo: 
-  - Linux-Server-mcm735-325112080352
   - Aria LCM
   - IDM
   - Centos 7
   - VM Aria
   - BIGIP-1
+  - BIGIP-2
   - BIGIP-3
+  - VM-01-Win22
+  - VM-01-Win25
+  - VM-02-Win22
+  - VM-02-Win25
   - DemoIZZI
   - Dynatrace
   - WebServer_1.1
@@ -39,14 +43,13 @@ vm_list_demo:
   - CP03-icsiocp
   - Bastion
   - BastionWin
-  - Linux-Server-mcm735-325112080352
   - Win11-1
   - Win11-2
   - Win11-3
   - Win2022-1
   - Win2022-2
   - BIGIP-1
-  - BIGIP-3
+  - BIGIP-2
   - DemoIZZI
   - Dynatrace
   - WebServer_1.1
@@ -56,7 +59,11 @@ vm_list_demo:
   - Centos 7
   - IDM
   - VM Aria
-  - Linux-Server-mcm735-325112080352
+  - VM-01-Win22
+  - VM-01-Win25
+  - VM-02-Win22
+  - VM-02-Win25
+ 
 
 
 
