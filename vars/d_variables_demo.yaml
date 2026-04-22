@@ -38,11 +38,6 @@ vm_list_demo:
 
   #lista de encendido
   - Active Directory
-  - CP01-icsiocp
-  - CP02-icsiocp
-  - CP03-icsiocp
-  - Bastion
-  - BastionWin
   - Win11-1
   - Win11-2
   - Win11-3
